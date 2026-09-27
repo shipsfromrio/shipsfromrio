@@ -10,8 +10,8 @@ I'm a lawyer in Brazil. My practice needed software nobody sold, so I wrote it, 
 Today I build and operate, by myself, the production stack behind a working law office:
 
 - **A CRM in daily production use**: case tracking, deadlines, client messaging, document intake.
-- **CI with a merge queue**: required checks, serialized merges, guards that fail closed. Tens of
-  thousands of commits, reviewed and merged through that pipeline.
+- **CI with a merge queue**: required checks, serialized merges, guards that fail closed. About
+  6,000 commits and 3,483 merged pull requests since July 2026, all through that pipeline.
 - **An LLM gateway with ~29 providers**: OpenAI-compatible routing, combo fallbacks, per-provider
   quota handling, so one outage or rate limit never stops the work.
 
