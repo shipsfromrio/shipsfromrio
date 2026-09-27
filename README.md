@@ -6,9 +6,8 @@ I build and run production systems alone, end to end, and I fix bugs in the open
 
 #### The short story
 
-I practiced law in Brazil. My practice needed software nobody sold, so I wrote it, then kept going
-until the software was the practice. Today I build and operate, by myself, the production stack
-behind a working law office:
+I'm a lawyer in Brazil. My practice needed software nobody sold, so I wrote it, and kept going.
+Today I build and operate, by myself, the production stack behind a working law office:
 
 - **A CRM in daily production use**: case tracking, deadlines, client messaging, document intake.
 - **CI with a merge queue**: required checks, serialized merges, guards that fail closed. Tens of
@@ -29,10 +28,13 @@ Nobody hands me tickets. I decide what to build, measure whether it worked, and 
 
 #### Open source
 
-I contribute to **OmniRoute**, an OpenAI-compatible LLM router. Merged work:
+I contribute to **OmniRoute**, an OpenAI-compatible LLM router. Every fix starts from a bug I hit in
+production and ships with a test that fails without it.
 
 <!-- PRS -->
-- _Coming soon: merged pull requests listed here._
+- [#14941](https://github.com/diegosouzapw/OmniRoute/pull/14941) connection test no longer re-enables operator-disabled (paid) connections
+- [#14942](https://github.com/diegosouzapw/OmniRoute/pull/14942) non-stream requests to chaos combos return JSON, not SSE
+- [#14943](https://github.com/diegosouzapw/OmniRoute/pull/14943) OpenCode plugin keeps its model cache when a sync fetch fails
 <!-- /PRS -->
 
 #### Hire me
@@ -41,7 +43,7 @@ I contribute to **OmniRoute**, an OpenAI-compatible LLM router. Merged work:
   and the European afternoon.
 - **Freelance**: LLM gateway setup, fallback routing, CI and automation, bug hunts in your stack.
 
-Email **hi@shipsfromrio.com**. If my public work has already saved you time, you can support it on
-[GitHub Sponsors](https://github.com/sponsors/shipsfromrio) or [Ko-fi](https://ko-fi.com/shipsfromrio).
+Email **shipsfromrio@gmail.com**. If my public work has already saved you time, you can buy me a
+coffee on [Ko-fi](https://ko-fi.com/shipsfromrio).
 
 <sub>aka byterj</sub>
