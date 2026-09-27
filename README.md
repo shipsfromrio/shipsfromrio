@@ -50,6 +50,8 @@ Each one is a silent failure with a real cost, and each ships with a test that f
 - [#14955](https://github.com/diegosouzapw/OmniRoute/pull/14955): a malformed 200 was replayed on the same account after the upstream had already billed it
 - [#14956](https://github.com/diegosouzapw/OmniRoute/pull/14956): responses served by the emergency fallback carried no marker of the provider swap
 - [#14957](https://github.com/diegosouzapw/OmniRoute/pull/14957): rate-limit overrides left abandoned jobs in the queue and stalled it
+- [#14958](https://github.com/diegosouzapw/OmniRoute/pull/14958): a search connection kept showing a stale error while it served traffic
+- [#14959](https://github.com/diegosouzapw/OmniRoute/pull/14959): a 429 with a long retry hint was still retried on the same account, stretching requests
 
 Plus [one issue comment](https://github.com/diegosouzapw/OmniRoute/issues/14931#issuecomment-5856149234) where a tokenizer measurement refuted the issue's premise.
 
