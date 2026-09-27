@@ -46,6 +46,10 @@ Each one is a silent failure with a real cost, and each ships with a test that f
 - [#14951](https://github.com/diegosouzapw/OmniRoute/pull/14951): the storage tab crashed with "[object Object]" instead of the API error
 - [#14952](https://github.com/diegosouzapw/OmniRoute/pull/14952): setup-claude wrote profiles for providers the host cannot run
 - [#14953](https://github.com/diegosouzapw/OmniRoute/pull/14953): self-host guide pointed to unreleased files
+- [#14954](https://github.com/diegosouzapw/OmniRoute/pull/14954): Gemini's default thinking budget could eat the whole max_tokens and return empty content
+- [#14955](https://github.com/diegosouzapw/OmniRoute/pull/14955): a malformed 200 was replayed on the same account after the upstream had already billed it
+- [#14956](https://github.com/diegosouzapw/OmniRoute/pull/14956): responses served by the emergency fallback carried no marker of the provider swap
+- [#14957](https://github.com/diegosouzapw/OmniRoute/pull/14957): rate-limit overrides left abandoned jobs in the queue and stalled it
 
 Plus [one issue comment](https://github.com/diegosouzapw/OmniRoute/issues/14931#issuecomment-5856149234) where a tokenizer measurement refuted the issue's premise.
 
