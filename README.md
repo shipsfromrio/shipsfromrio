@@ -32,6 +32,11 @@ that refuses a push carrying a Brazilian CPF or CNJ case number. It fails closed
 never prints an unmasked value, and a mutation bench proves the tests fail when the guard is broken
 (92 tests, 25 of 25 mutants killed).
 
+I also publish [homecoming](https://github.com/shipsfromrio/homecoming), a TypeScript CLI that brings
+your own Claude Code sessions back into the sidebar after you switch accounts, without moving or
+modifying the originals. Dry run by default, reversible, extensible through a small plugin API,
+1,932 tests.
+
 ## Open source: OmniRoute (open PRs, opened 2026-09-27, none merged yet)
 
 Each one is a silent failure with a real cost, and each ships with a test that fails without the fix:
