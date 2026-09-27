@@ -35,6 +35,8 @@ production and ships with a test that fails without it.
 - [#14941](https://github.com/diegosouzapw/OmniRoute/pull/14941) connection test no longer re-enables operator-disabled (paid) connections
 - [#14942](https://github.com/diegosouzapw/OmniRoute/pull/14942) non-stream requests to chaos combos return JSON, not SSE
 - [#14943](https://github.com/diegosouzapw/OmniRoute/pull/14943) OpenCode plugin keeps its model cache when a sync fetch fails
+- [#14945](https://github.com/diegosouzapw/OmniRoute/pull/14945) documents `CONTEXT_LENGTH_<PROVIDER>` and the desktop `.env` lookup order
+- [#14946](https://github.com/diegosouzapw/OmniRoute/pull/14946) dashboard warns when a logs export is truncated
 <!-- /PRS -->
 
 #### Hire me
