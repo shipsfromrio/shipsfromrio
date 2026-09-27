@@ -24,6 +24,14 @@ and deciding what merges. The control system around them:
 
 The repo is private. I'm happy to walk through the architecture and the guards live in an interview.
 
+## Verifiable from the outside
+
+My production repo is private, so here is one of its ideas rebuilt in public:
+[failclosed-pii-guard](https://github.com/shipsfromrio/failclosed-pii-guard), a git pre-push hook
+that refuses a push carrying a Brazilian CPF or CNJ case number. It fails closed on every doubt,
+never prints an unmasked value, and a mutation bench proves the tests fail when the guard is broken
+(92 tests, 25 of 25 mutants killed).
+
 ## Open source: OmniRoute (open PRs, opened 2026-09-27, none merged yet)
 
 Each one is a silent failure with a real cost, and each ships with a test that fails without the fix:
