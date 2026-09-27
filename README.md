@@ -33,6 +33,11 @@ Each one is a silent failure with a real cost, and each ships with a test that f
 - [#14943](https://github.com/diegosouzapw/OmniRoute/pull/14943): OpenCode plugin cache wiped on timeout
 - [#14942](https://github.com/diegosouzapw/OmniRoute/pull/14942): non-stream combo returned SSE
 - [#14945](https://github.com/diegosouzapw/OmniRoute/pull/14945): docs for CONTEXT_LENGTH
+- [#14949](https://github.com/diegosouzapw/OmniRoute/pull/14949): an open circuit breaker surfaced as a generic error, hiding the real cause
+- [#14950](https://github.com/diegosouzapw/OmniRoute/pull/14950): a reserved provider prefix was rejected with a bare "Invalid request"
+- [#14951](https://github.com/diegosouzapw/OmniRoute/pull/14951): the storage tab crashed with "[object Object]" instead of the API error
+- [#14952](https://github.com/diegosouzapw/OmniRoute/pull/14952): setup-claude wrote profiles for providers the host cannot run
+- [#14953](https://github.com/diegosouzapw/OmniRoute/pull/14953): self-host guide pointed to unreleased files
 
 Plus [one issue comment](https://github.com/diegosouzapw/OmniRoute/issues/14931#issuecomment-5856149234) where a tokenizer measurement refuted the issue's premise.
 
