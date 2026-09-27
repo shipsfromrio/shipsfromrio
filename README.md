@@ -1,51 +1,52 @@
-### Lawyer turned engineer. Ships from Rio, on your timezone.
+# Caio Figueiroa: lawyer and engineer
 
-I build and run production systems alone, end to end, and I fix bugs in the open source tools I depend on.
+I practice law in Rio de Janeiro, and I also build and operate the software my practice runs on.
+Law trained me to write for a hostile reader and to never claim what the record doesn't support.
+I apply the same rule to code: measure, don't guess.
 
----
+## How it's built (said once, plainly)
 
-#### The short story
+I orchestrate a fleet of AI coding agents (Claude, Codex). I don't type most of the code.
+My job is the part agents can't do alone: architecture, the guards, adversarial review,
+and deciding what merges. The control system around them:
 
-I'm a lawyer in Brazil. My practice needed software nobody sold, so I wrote it, and kept going.
-Today I build and operate, by myself, the production stack behind a working law office:
+- GitHub merge queue; pre-push guards that fail closed (when in doubt, refuse)
+- Adversarial review before merge; every fix needs a test that fails without it
+- House rule: where deterministic code gives the same or a better answer, no LLM gets the job
 
-- **A CRM in daily production use**: case tracking, deadlines, client messaging, document intake.
-- **CI with a merge queue**: required checks, serialized merges, guards that fail closed. About
-  6,000 commits and 3,483 merged pull requests since July 2026, all through that pipeline.
-- **An LLM gateway with ~29 providers**: OpenAI-compatible routing, combo fallbacks, per-provider
-  quota handling, so one outage or rate limit never stops the work.
+## Measured on 2026-09-27 (private repo, first commit 2026-07-04)
 
-Nobody hands me tickets. I decide what to build, measure whether it worked, and carry the pager.
+- 5,995 commits on main (squash merge), 3,483 merged PRs, 3,636 issues
+- 1,478 test files
+- About 41 merged PRs/day. That cadence exists because of the agents;
+  the guards are why it's safe to keep.
+- Also in production: an LLM gateway (OmniRoute) with ~29 provider connections and fallback combos
 
-#### What I ship
+The repo is private. I'm happy to walk through the architecture and the guards live in an interview.
 
-- **LLM gateways and routing**: OpenAI-compatible APIs, provider fallback chains, streaming,
-  retries, cost and quota control.
-- **TypeScript and Python automation**: backends, integrations, scrapers, scheduled jobs, CLIs.
-- **CI and developer tooling**: merge queues, pre-push guards, test harnesses that actually catch
-  the broken implementation.
-- **Production bug fixing in open source**: reproduce, write the failing test, fix, upstream it.
+## Open source: OmniRoute (open PRs, opened 2026-09-27, none merged yet)
 
-#### Open source
+Each one is a silent failure with a real cost, and each ships with a test that fails without the fix:
 
-I contribute to **OmniRoute**, an OpenAI-compatible LLM router. Every fix starts from a bug I hit in
-production and ships with a test that fails without it.
+- [#14941](https://github.com/diegosouzapw/OmniRoute/pull/14941): connection test re-enabled a paid provider the user had turned off
+- [#14946](https://github.com/diegosouzapw/OmniRoute/pull/14946): log export truncated with no warning
+- [#14943](https://github.com/diegosouzapw/OmniRoute/pull/14943): OpenCode plugin cache wiped on timeout
+- [#14942](https://github.com/diegosouzapw/OmniRoute/pull/14942): non-stream combo returned SSE
+- [#14945](https://github.com/diegosouzapw/OmniRoute/pull/14945): docs for CONTEXT_LENGTH
 
-<!-- PRS -->
-- [#14941](https://github.com/diegosouzapw/OmniRoute/pull/14941) connection test no longer re-enables operator-disabled (paid) connections
-- [#14942](https://github.com/diegosouzapw/OmniRoute/pull/14942) non-stream requests to chaos combos return JSON, not SSE
-- [#14943](https://github.com/diegosouzapw/OmniRoute/pull/14943) OpenCode plugin keeps its model cache when a sync fetch fails
-- [#14945](https://github.com/diegosouzapw/OmniRoute/pull/14945) documents `CONTEXT_LENGTH_<PROVIDER>` and the desktop `.env` lookup order
-- [#14946](https://github.com/diegosouzapw/OmniRoute/pull/14946) dashboard warns when a logs export is truncated
-<!-- /PRS -->
+Plus [one issue comment](https://github.com/diegosouzapw/OmniRoute/issues/14931#issuecomment-5856149234) where a tokenizer measurement refuted the issue's premise.
 
-#### Hire me
+## What I bring
 
-- **Remote full-time**, paid in USD or EUR. Brazil time (UTC-3) overlaps the US East Coast workday
-  and the European afternoon.
-- **Freelance**: LLM gateway setup, fallback routing, CI and automation, bug hunts in your stack.
+- I hunt the failure that doesn't announce itself (unwanted billing, silent truncation)
+- I can judge whether a legal output is correct, and build the harness that checks it every time
+- Specs, postmortems and PR bodies written for a reader looking for the gap
 
-Email **shipsfromrio@gmail.com**. If my public work has already saved you time, you can buy me a
-coffee on [Ko-fi](https://ko-fi.com/shipsfromrio).
+## Hire me
+
+Remote (USD/EUR) or freelance. Rio, UTC-3: overlaps the US East business day and European afternoons.
+I keep practicing law, and I say so up front.
+
+Contact: **shipsfromrio@gmail.com**
 
 <sub>aka byterj</sub>
